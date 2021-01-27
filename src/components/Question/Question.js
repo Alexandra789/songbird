@@ -8,10 +8,11 @@ export default function Question() {
     return (
         <div className="question-container">
             <div className="bird-random">
-            <img src={birdShadow} alt="bird shadow" />
-            <div className="question-content">
-                <div className="name">{name}</div>
+                <img src={birdShadow} alt="bird shadow" />
+                <div className="question-content">
+                    <div className="name">{name}</div>
+                </div>
             </div>
-        </div></div>
+        </div>
     )
 }
