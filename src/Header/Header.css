@@ -13,12 +13,12 @@
 }
 
 .header-container .header-top img {
-  width: 160px;
-  height: 90px;
+  width: 200px;
+  height: 55px;
 }
 
 .header-container .header-top .score {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .header-container .menu {
@@ -36,7 +36,7 @@
 }
 
 .header-container .menu .item.active {
-  background-color: #166dd7;
+  background-color: #00bc8c;
 }
 
 .header-container .menu .item {
@@ -45,7 +45,7 @@
       -ms-flex: auto;
           flex: auto;
   text-align: center;
-  background-color: #164989;
+  background-color: #008966;
 }
 
 .header-container .menu .item:first-of-type {

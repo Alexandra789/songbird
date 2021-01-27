@@ -6,12 +6,12 @@
         margin-top: 25px;
         margin-bottom: 15px;
         img {
-            width: 160px;
-            height: 90px;
+            width: 200px;
+            height: 55px;
         }
 
         .score {
-            font-size: 18px;
+            font-size: 20px;
         }
     }
     .menu {
@@ -23,14 +23,14 @@
         display: flex;
 
         .item.active {
-            background-color: #166dd7;;
+            background-color: #00bc8c;
         }
 
         .item {
             padding: 8px 0px;
             flex: auto;
             text-align: center;
-            background-color: #164989;
+            background-color: #008966;
 
             &:first-of-type {
                 border-top-left-radius: 5px;

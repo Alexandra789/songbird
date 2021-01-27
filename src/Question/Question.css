@@ -1,1 +1,29 @@
-/* No CSS *//*# sourceMappingURL=Question.css.map */
+.question-container .bird-random {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #303030;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  padding: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.question-container .bird-random img {
+  width: 200px;
+  height: 155px;
+  border-radius: 10px;
+}
+
+.question-container .bird-random .question-content {
+  width: calc(100% - 240px);
+}
+
+.question-container .bird-random .question-content .name {
+  padding-bottom: 20px;
+  border-bottom: 0.1px solid #9b979770;
+  font-size: 32px;
+}
+/*# sourceMappingURL=Question.css.map */
