@@ -1,0 +1,18 @@
+.bird-card {
+  background-color: #303030;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/*# sourceMappingURL=App.css.map */

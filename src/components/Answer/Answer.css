@@ -1,5 +1,7 @@
 .answer-container .answers-list {
+  width: 540px;
   padding: 0px;
+  margin: 0px;
 }
 
 .answer-container .answers-list .item {
