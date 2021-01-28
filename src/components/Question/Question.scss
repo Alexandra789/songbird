@@ -3,14 +3,15 @@
     display: flex;
     img {
         width: 200px;
-        height: 155px;
+        height: 188px;
+        object-fit: cover;
         border-radius: 10px;
     }
     .question-content {
         width: calc(100% - 240px);
 
         .name {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 0.1px solid #9b979770;
             font-size: 32px;
@@ -20,6 +21,13 @@
             border-bottom: 0.1px solid #9b979770;
             margin-bottom: 10px;
             padding-bottom: 10px;
+        }
+        .bird-voice{
+            margin-top: 15px;
+            width: 100%;
+            &:focus{
+                outline: none;
+            }
         }
     }
 }
