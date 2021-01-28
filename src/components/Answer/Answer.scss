@@ -1,3 +1,37 @@
-.answer-container{
-    
+.answer-container {
+    .answers-list {
+        padding: 0px;
+        .item {
+            list-style-type: none;
+            padding: 15px 20px;
+            border: 1px solid #444;
+            &:first-of-type{
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+            &:last-of-type{
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+            &:hover {
+                background-color: #444;
+            }
+            .radio-button {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                margin-right: 15px;
+                border-radius: 50%;
+                -webkit-transition: 0.1s;
+                transition: 0.1s;
+                background-color: #444;
+            }
+            .success.radio-button{
+                background-color: #00bc8c;
+            }
+            .error.radio-button{
+                background-color: #d62c1a;
+            }
+        }
+    }
 }

@@ -1,1 +1,43 @@
-/* No CSS *//*# sourceMappingURL=Answer.css.map */
+.answer-container .answers-list {
+  padding: 0px;
+}
+
+.answer-container .answers-list .item {
+  list-style-type: none;
+  padding: 15px 20px;
+  border: 1px solid #444;
+}
+
+.answer-container .answers-list .item:first-of-type {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.answer-container .answers-list .item:last-of-type {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.answer-container .answers-list .item:hover {
+  background-color: #444;
+}
+
+.answer-container .answers-list .item .radio-button {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 15px;
+  border-radius: 50%;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  background-color: #444;
+}
+
+.answer-container .answers-list .item .success.radio-button {
+  background-color: #00bc8c;
+}
+
+.answer-container .answers-list .item .error.radio-button {
+  background-color: #d62c1a;
+}
+/*# sourceMappingURL=Answer.css.map */

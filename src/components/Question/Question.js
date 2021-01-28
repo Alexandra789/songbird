@@ -4,7 +4,7 @@ import birdShadow from './bird-shadow.jpg';
 
 export default function Question() {
     const [name, setName] = useState('******');
-    const [img, setImg] = useState({ birdShadow });
+    // const [img, setImg] = useState('./bird-shadow.jpg');
     return (
         <div className="question-container">
             <div className="bird-random">
