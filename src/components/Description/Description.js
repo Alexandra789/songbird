@@ -7,7 +7,8 @@ export default function Description(props) {
             <Question 
             displayImage = {props.birdInfo.image}
             displayName = {props.birdInfo.name}
-            displayEngName = {props.birdInfo.species}/>
+            displayEngName = {props.birdInfo.species}
+            displayVoice = {props.birdInfo.audio}/>
             <div className="description">
                 {props.birdInfo ? props.birdInfo.description : '' }
         </div>

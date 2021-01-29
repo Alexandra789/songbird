@@ -21,6 +21,7 @@
 }
 
 .answer-container .answers-list .item:hover {
+  cursor: pointer;
   background-color: #444;
 }
 

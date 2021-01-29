@@ -15,7 +15,8 @@
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
             }
-            &:hover {
+            &:hover { 
+                cursor: pointer;
                 background-color: #444;
             }
             .radio-button {
