@@ -4,61 +4,34 @@ import Answer from './components/Answer/Answer';
 import Description from './components/Description/Description';
 import Button from './components/Button/Button';
 import birdsData from './birds';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 
 const voiceNumber = Math.floor(Math.random() * Math.floor(6));
 function App() {
   const [birdInfo, setBirdInfo] = useState(null);
   const [answer, setAnswer] = useState(false);
-  // const [voice, setVoice] = useState('');
-  const [scope, setScope] = useState(0);
+  const [scope, setScope] = useState(5);
   const [level, setLevel] = useState(0);
-  const [countAttemps, setCountAttemps] = useState(0); 
+  const [countAttemps, setCountAttemps] = useState(0);
   let randomBirdVoice = birdsData[level][voiceNumber].audio;
-  // useEffect(()=>{
-  //  console.log('уровень='+level);
-  // console.log('попытки' + countAttemps);
-  // console.log('очки-' + scope)
-  // console.log('voice = ' + voice)
-  console.log('randomVoice app = '+ randomBirdVoice)
-  console.log('answer = ' + answer)
-  // console.log(randomBirdVoice)
-  // setVoice(randomBirdVoice);
-//   const countScope = () => {
-//     let scope = 5;
-//     if(!answer)
-//         scope = scope - countAttemps;
-//         if(scope < 0){
-//             scope = 0;
-//         }
-//     setScope(scope);
-
-// // }
-// countScope();  
-// },[answer,level,countAttemps, scope, voice, randomBirdVoice])
-      // }
-    
-  // console.log('voice = ' + voice)
-  
-
   
   return (
     <div className="App">
-      <Header scope={scope} countAttemps={countAttemps}/>
+      <Header scope={scope} countAttemps={countAttemps} />
       <div className="bird-card">
-        <Question randomBirdVoice={randomBirdVoice}/>
+        <Question randomBirdVoice={randomBirdVoice} />
       </div>
       <div className="main-content">
-        <Answer level={level} setBirdInfo={setBirdInfo} randomBirdVoice={randomBirdVoice} setScope={setScope} setAnswer={setAnswer} countAttemps={countAttemps} setCountAttemps={setCountAttemps}/>
+        <Answer level={level} setBirdInfo={setBirdInfo} randomBirdVoice={randomBirdVoice} scope={scope} setScope={setScope} setAnswer={setAnswer} countAttemps={countAttemps} setCountAttemps={setCountAttemps} />
         <div className="bird-card">
           {
             birdInfo ?
-              (<Description birdInfo={birdInfo}/>)
+              (<Description birdInfo={birdInfo} />)
               :
               'Послушайте плеер. Выберите птицу из списка'
           }
-        </div> <Button answer={answer} setLevel = {setLevel}/>
+        </div> <Button answer={answer} setLevel={setLevel} />
       </div>
     </div>
   );

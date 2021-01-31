@@ -3,35 +3,29 @@ import './Answer.css';
 
 
 export default function Answer(props) {
-    
-   
-    // const countScope = (answer) => {
-    //     let scope = 5;
-    //     if(!answer)
-    //         scope = scope - props.countAttemps;
-    //         if(props.scope < 0){
-    //             props.scope = 0;
-    //         }
-    //     props.setScope(scope);
 
-    // }
-    let x = document.getElementsByTagName('span');
-    console.log(x)
-    const comparisonAnswer = (e,bird) => {
+    const comparisonAnswer = (e, bird) => {
         let answer = false;
-        console.log('randomVoice = '+ props.randomBirdVoice);
-        console.log('change voice = ' + bird.audio);
+        let success = false;
+        let allRadioButton = document.querySelectorAll('.radio-button');
+        let radioButton = e.target.children[0];
+        for (let i = 0; i < allRadioButton.length; i++) {
+            if (allRadioButton[i].classList.contains('success')) {
+                success = true;
+            }
+        }
         if (props.randomBirdVoice === bird.audio) {
             answer = true;
-            e.target.children[0].classList.add('success');
+            props.setScope(props.scope);
+            radioButton.classList.add('success');
             props.setCountAttemps(props.countAttemps);
         } else {
-            e.target.children[0].classList.add('error');
+            if (success !== true && radioButton.classList.contains('error') !== true) {
+                props.setScope(props.scope - 1);
+            }
+            radioButton.classList.add('error');
             props.setCountAttemps(props.countAttemps + 1);
-        } 
-        // props.setBirdVoice(randomBirdVoice);
-        // countScope(answer);
-        // changeColorItem(answer);
+        }
         props.setAnswer(answer);
     }
 
@@ -45,7 +39,7 @@ export default function Answer(props) {
             }
         }
         props.setBirdInfo(bird);
-        comparisonAnswer(e,bird);
+        comparisonAnswer(e, bird);
     };
 
     return (
