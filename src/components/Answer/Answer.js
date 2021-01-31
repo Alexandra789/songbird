@@ -5,19 +5,21 @@ import './Answer.css';
 export default function Answer(props) {
     
    
-    const countScope = (answer) => {
-        let scope = 5;
-        if(!answer)
-            scope = scope - props.countAttemps;
-            if(props.scope < 0){
-                props.scope = 0;
-            }
-        props.setScope(scope);
+    // const countScope = (answer) => {
+    //     let scope = 5;
+    //     if(!answer)
+    //         scope = scope - props.countAttemps;
+    //         if(props.scope < 0){
+    //             props.scope = 0;
+    //         }
+    //     props.setScope(scope);
 
-    }
+    // }
 
     const comparisonAnswer = (bird) => {
         let answer = false;
+        console.log('randomVoice = '+ props.randomBirdVoice);
+        console.log('change voice = ' + bird.audio);
         if (props.randomBirdVoice === bird.audio) {
             answer = true;
             props.setCountAttemps(props.countAttemps);
@@ -25,7 +27,7 @@ export default function Answer(props) {
             props.setCountAttemps(props.countAttemps + 1);
         }
         // props.setBirdVoice(randomBirdVoice);
-        countScope(answer);
+        // countScope(answer);
         props.setAnswer(answer);
     }
 

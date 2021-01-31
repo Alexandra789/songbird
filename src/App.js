@@ -11,21 +11,34 @@ const voiceNumber = Math.floor(Math.random() * Math.floor(6));
 function App() {
   const [birdInfo, setBirdInfo] = useState(null);
   const [answer, setAnswer] = useState(false);
-  const [voice, setVoice] = useState('');
+  // const [voice, setVoice] = useState('');
   const [scope, setScope] = useState(0);
   const [level, setLevel] = useState(0);
   const [countAttemps, setCountAttemps] = useState(0); 
   let randomBirdVoice = birdsData[level][voiceNumber].audio;
-  useEffect(()=>{
-   console.log('уровень='+level);
-  console.log('попытки' + countAttemps);
-  console.log('очки-' + scope)
-  console.log('voice = ' + voice)
+  // useEffect(()=>{
+  //  console.log('уровень='+level);
+  // console.log('попытки' + countAttemps);
+  // console.log('очки-' + scope)
+  // console.log('voice = ' + voice)
+  console.log('randomVoice app = '+ randomBirdVoice)
+  console.log('answer = ' + answer)
   // console.log(randomBirdVoice)
-  setVoice(randomBirdVoice);
-  
-  },[level,countAttemps, scope, voice, randomBirdVoice])
-  
+  // setVoice(randomBirdVoice);
+//   const countScope = () => {
+//     let scope = 5;
+//     if(!answer)
+//         scope = scope - countAttemps;
+//         if(scope < 0){
+//             scope = 0;
+//         }
+//     setScope(scope);
+
+// // }
+// countScope();  
+// },[answer,level,countAttemps, scope, voice, randomBirdVoice])
+      // }
+    
   // console.log('voice = ' + voice)
   
 
@@ -34,10 +47,10 @@ function App() {
     <div className="App">
       <Header scope={scope} countAttemps={countAttemps}/>
       <div className="bird-card">
-        <Question voice={voice}/>
+        <Question randomBirdVoice={randomBirdVoice}/>
       </div>
       <div className="main-content">
-        <Answer level={level} setBirdInfo={setBirdInfo}   setScope={setScope} setAnswer={setAnswer} countAttemps={countAttemps} setCountAttemps={setCountAttemps}/>
+        <Answer level={level} setBirdInfo={setBirdInfo} randomBirdVoice={randomBirdVoice} setScope={setScope} setAnswer={setAnswer} countAttemps={countAttemps} setCountAttemps={setCountAttemps}/>
         <div className="bird-card">
           {
             birdInfo ?

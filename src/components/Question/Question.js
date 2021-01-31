@@ -2,7 +2,6 @@ import './Question.css';
 import birdShadow from './bird-shadow.jpg';
 
 export default function Question(props) {
-    console.log(props.voice);
     return (
         <div className="question-container">
             {props.displayImage ?
@@ -26,7 +25,7 @@ export default function Question(props) {
                         <source src={props.displayVoice} type="audio/mpeg" /> </audio>
                         )
                     : (<audio className="bird-voice" controls preload="metadata">
-                        <source src={props.voice} type="audio/mpeg" />
+                        <source src={props.randomBirdVoice} type="audio/mpeg" />
                     </audio>)
                 }
             </div>
