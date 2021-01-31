@@ -15,19 +15,23 @@ export default function Answer(props) {
     //     props.setScope(scope);
 
     // }
-
-    const comparisonAnswer = (bird) => {
+    let x = document.getElementsByTagName('span');
+    console.log(x)
+    const comparisonAnswer = (e,bird) => {
         let answer = false;
         console.log('randomVoice = '+ props.randomBirdVoice);
         console.log('change voice = ' + bird.audio);
         if (props.randomBirdVoice === bird.audio) {
             answer = true;
+            e.target.children[0].classList.add('success');
             props.setCountAttemps(props.countAttemps);
         } else {
+            e.target.children[0].classList.add('error');
             props.setCountAttemps(props.countAttemps + 1);
-        }
+        } 
         // props.setBirdVoice(randomBirdVoice);
         // countScope(answer);
+        // changeColorItem(answer);
         props.setAnswer(answer);
     }
 
@@ -41,7 +45,7 @@ export default function Answer(props) {
             }
         }
         props.setBirdInfo(bird);
-        comparisonAnswer(bird);
+        comparisonAnswer(e,bird);
     };
 
     return (
