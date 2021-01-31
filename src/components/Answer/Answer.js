@@ -22,8 +22,9 @@ export default function Answer(props) {
         } else {
             if (success !== true && radioButton.classList.contains('error') !== true) {
                 props.setScope(props.scope - 1);
+                radioButton.classList.add('error');
             }
-            radioButton.classList.add('error');
+            
             props.setCountAttemps(props.countAttemps + 1);
         }
         props.setAnswer(answer);
