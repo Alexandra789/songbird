@@ -8,18 +8,24 @@ export default function Question(props) {
     return (
         <div className="question-container">
             {props.displayImage ?
-                (<img src={props.displayImage} alt="bird shadow" />)
+                <img src={props.displayImage} alt="bird shadow" />
+                :
+                props.rightAnswer ?
+                <img src={props.rightAnswer.image} alt="bird right answer img"/>
                 :
                 <img src={birdShadow} alt="bird shadow" />
             }
             <div className="question-content">
                 {props.displayName ?
-                    (<div className="name">{props.displayName}</div>)
+                    <div className="name">{props.displayName}</div>
                     :
-                    <div className="name">******</div>
+                    props.rightAnswer ? 
+                    <div className="name">{props.rightAnswer.name}</div> 
+                    : 
+                    <div className="name">****** </div>
                 }
                 {props.displayEngName ?
-                    (<div className="eng-name">{props.displayEngName}</div>)
+                    <div className="eng-name">{props.displayEngName}</div>
                     :
                     ''
                 }

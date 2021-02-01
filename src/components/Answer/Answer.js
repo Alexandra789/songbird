@@ -15,17 +15,20 @@ export default function Answer(props) {
             }
         }
         if (props.randomBirdVoice === bird.audio) {
+            let rightAnswer = bird;
+            console.log(rightAnswer);
+            props.setRightAnswer(rightAnswer);
             answer = true;
             props.setScope(props.scope);
             radioButton.classList.add('success');
-            props.setCountAttemps(props.countAttemps);
+            // props.setCountAttemps(props.countAttemps);
         } else {
             if (success !== true && radioButton.classList.contains('error') !== true) {
                 props.setScope(props.scope - 1);
                 radioButton.classList.add('error');
             }
             
-            props.setCountAttemps(props.countAttemps + 1);
+            // props.setCountAttemps(props.countAttemps + 1);
         }
         props.setAnswer(answer);
     }

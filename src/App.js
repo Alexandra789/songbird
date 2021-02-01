@@ -11,23 +11,24 @@ const voiceNumber = Math.floor(Math.random() * Math.floor(6));
 function App() {
   const [birdInfo, setBirdInfo] = useState(null);
   const [answer, setAnswer] = useState(false);
+  const [rightAnswer, setRightAnswer] = useState(null);
   const [scope, setScope] = useState(5);
   const [level, setLevel] = useState(0);
-  const [countAttemps, setCountAttemps] = useState(0);
+  // const [countAttemps, setCountAttemps] = useState(0);
   let randomBirdVoice = birdsData[level][voiceNumber].audio;
 
   return (
     <div className="App">
-      <Header scope={scope} countAttemps={countAttemps} />
-      <div className="bird-card">
-        <Question randomBirdVoice={randomBirdVoice} />
+      <Header scope={scope} />
+      <div className="bird-card">   
+        <Question randomBirdVoice={randomBirdVoice} rightAnswer={rightAnswer}/>
       </div>
       <div className="main-content">
-        <Answer level={level} setBirdInfo={setBirdInfo} randomBirdVoice={randomBirdVoice} scope={scope} setScope={setScope} setAnswer={setAnswer} countAttemps={countAttemps} setCountAttemps={setCountAttemps} />
+        <Answer level={level} setBirdInfo={setBirdInfo} randomBirdVoice={randomBirdVoice} scope={scope} setScope={setScope} setAnswer={setAnswer} setRightAnswer={setRightAnswer}/>
         <div className="bird-card">
           {
             birdInfo ?
-              (<Description birdInfo={birdInfo} />)
+              (<Description  birdInfo={birdInfo} />)
               :
               (<div>
                   <span>Послушайте плеер.</span><br/>
