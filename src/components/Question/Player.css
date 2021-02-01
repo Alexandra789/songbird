@@ -1,0 +1,34 @@
+.rhap_container {
+  background-color: #303030 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  padding: 0px !important;
+}
+
+.rhap_container .rhap_time.rhap_current-time,
+.rhap_container .rhap_time.rhap_total-time {
+  color: white;
+}
+
+.rhap_container svg {
+  color: #00bc8c;
+}
+
+.rhap_container svg:focus {
+  outline: none;
+}
+
+.rhap_container .rhap_progress-filled {
+  background-color: none !important;
+  background: -webkit-gradient(linear, left top, right top, color-stop(40%, #008463), color-stop(17.3174%, #1f8664)) !important;
+  background: linear-gradient(to right, #008463 40%, #1f8664 17.3174%) !important;
+}
+
+.rhap_container .rhap_download-progress {
+  background-color: #737373 !important;
+}
+
+.rhap_container .rhap_volume-bar {
+  background: #737373 !important;
+}
+/*# sourceMappingURL=Player.css.map */

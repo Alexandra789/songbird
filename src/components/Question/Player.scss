@@ -1,0 +1,30 @@
+.rhap_container {
+    background-color: #303030 !important;
+    box-shadow: none !important;
+    padding: 0px !important;
+    .rhap_time.rhap_current-time,
+    .rhap_time.rhap_total-time {
+        color: white;
+    }
+    svg {
+        color: #00bc8c;
+        &:focus{
+            outline: none;
+        }
+    }
+    .rhap_progress-filled {
+        background-color: none !important;
+        background: linear-gradient(
+                to right,
+                #008463 40%, #1f8664 17.3174%
+                // rgb(115, 115, 115) 17.3174%,
+                // rgb(115, 115, 115) 100%
+            ) !important;
+    }
+    .rhap_download-progress{
+        background-color:rgb(115, 115, 115) !important ;
+    }
+    .rhap_volume-bar{
+        background:rgb(115, 115, 115) !important ;
+    }
+}

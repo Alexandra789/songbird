@@ -15,4 +15,9 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
+.main-content .bird-card {
+  width: 550px;
+  height: 289px;
+}
 /*# sourceMappingURL=App.css.map */

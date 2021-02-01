@@ -5,8 +5,12 @@
     padding: 1rem;
 }
 
-.main-content{
+.main-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    .bird-card {
+        width: 550px;
+        height: 289px;
+    }
 }

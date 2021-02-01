@@ -1,4 +1,7 @@
 import './Question.css';
+import './Player.css';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 import birdShadow from './bird-shadow.jpg';
 
 export default function Question(props) {
@@ -21,12 +24,22 @@ export default function Question(props) {
                     ''
                 }
                 {props.displayVoice ? (
-                    <audio className="bird-voice" controls preload="metadata">
-                        <source src={props.displayVoice} type="audio/mpeg" /> </audio>
-                        )
-                    : (<audio className="bird-voice" controls preload="metadata">
-                        <source src={props.randomBirdVoice} type="audio/mpeg" />
-                    </audio>)
+                    <AudioPlayer
+                        showJumpControls={false}
+                        autoPlay={false}
+                        autoPlayAfterSrcChange={false}
+                        src={props.displayVoice}
+                    />
+                )
+                    :
+                    (
+                        <AudioPlayer
+                            showJumpControls={false}
+                            autoPlay={false}
+                            autoPlayAfterSrcChange={false}
+                            src={props.randomBirdVoice}
+                        />
+                    )
                 }
             </div>
         </div>
