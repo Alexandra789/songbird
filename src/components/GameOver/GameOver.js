@@ -17,7 +17,7 @@ export default function GameOver(props){
     return(
         <div className="game-over">
             <h1 className="congrats">Поздравляем!</h1>
-            <p className="text">Вы прошли викторину и набрали 0 из 30 возможных баллов</p>
+            <p className="text">Вы прошли викторину и набрали {props.scope} из 30 возможных баллов</p>
             <button className="button-game-over" onClick={restartGame}>Попробовать еще раз!</button>
         </div>
     )

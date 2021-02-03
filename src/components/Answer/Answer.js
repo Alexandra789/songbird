@@ -20,11 +20,12 @@ export default function Answer(props) {
             soundSuccess.play();
             props.setRightAnswer(bird);
             answer = true;
-            props.setScope(props.scope);
+            let scopeLevel = allRadioButton.length - props.countAttemps
+            props.setScope(props.scope + scopeLevel);
             radioButton.classList.add('success');
         } else {
             if (success !== true && radioButton.classList.contains('error') !== true) {
-                props.setScope(props.scope - 1);
+                props.setCountAttemps(props.countAttemps + 1);
                 soundError.play();  
                 radioButton.classList.add('error');
             }

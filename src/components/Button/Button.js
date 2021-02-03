@@ -17,7 +17,7 @@ export default function Button(props) {
             radioButton[i].classList.remove('error');
             radioButton[i].classList.remove('success');
         }
-       
+        props.setCountAttemps(1);
         props.setBirdInfo(null);
         props.setRightAnswer(null);
         props.setAnswer(false);
@@ -26,7 +26,6 @@ export default function Button(props) {
 
     const addLevel = () => {
         if (button != null) {
-            console.log("LEVELLLLLLL ===" + props.level)
             if (props.level === 5) {
                 menuItem[props.level].classList.remove('active');
                 gameOver.style.display = 'block';
