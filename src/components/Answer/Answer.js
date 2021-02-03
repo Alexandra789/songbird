@@ -16,7 +16,7 @@ export default function Answer(props) {
                 success = true;
             }
         }
-        if (props.randomBirdVoice === bird.audio) {
+        if (props.randomBirdVoice === bird.audio && radioButton.classList.contains('success') !== true) {
             soundSuccess.play();
             props.setRightAnswer(bird);
             answer = true;
@@ -48,7 +48,7 @@ export default function Answer(props) {
     return (
         <div className="answer-container">
             <ul className="answers-list">
-                {birdsData[0].map((item, i) =>
+                {birdsData[props.level].map((item, i) =>
                     <li className="item" key={i} onClick={changeBird}>
                         <span className="radio-button"></span>
                         {item.name}

@@ -36,11 +36,11 @@
   display: flex;
 }
 
-.header-container .menu .item.active {
+.header-container .menu .menu-item.active {
   background-color: #00bc8c;
 }
 
-.header-container .menu .item {
+.header-container .menu .menu-item {
   padding: 8px 0px;
   -webkit-box-flex: 1;
       -ms-flex: auto;
@@ -49,12 +49,12 @@
   background-color: #008966;
 }
 
-.header-container .menu .item:first-of-type {
+.header-container .menu .menu-item:first-of-type {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-.header-container .menu .item:last-of-type {
+.header-container .menu .menu-item:last-of-type {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }

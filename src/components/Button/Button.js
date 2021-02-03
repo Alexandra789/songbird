@@ -1,23 +1,28 @@
 import './Button.css';
 export default function Button(props) {
-    let level = 0;
     let button = document.querySelector('.button-level');
-    console.log(button)
+    let radioButton = document.querySelectorAll('.radio-button');
+    let menuItem = document.querySelectorAll('.menu-item');
+    console.log(menuItem)
     if (props.answer === true) {
-        // if (button != null) {
         button.classList.add('active');
-        // }
     }
-
+    
     const addLevel = () => {
-        console.log(props.answer)
         if (button != null) {
-            button.classList.remove('active');
             if (button.classList.contains('active')) {
-                // level = level +1;
-                // props.answer = false;
-                props.setLevel(level + 1)
+                for (let i = 0; i < radioButton.length; i++) {
+                    radioButton[i].classList.remove('error');
+                    radioButton[i].classList.remove('success');                 
+                }
+                menuItem[props.level].classList.remove('active');
+                props.setBirdInfo(null);
+                props.setRightAnswer(null);
+                props.setAnswer(false);
+                props.setLevel(props.level + 1);
+                menuItem[props.level+1].classList.add('active');
             }
+            button.classList.remove('active');
         }
     }
     return (

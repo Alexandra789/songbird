@@ -8,7 +8,7 @@ export default function Question(props) {
     return (
         <div className="question-container">
             {props.displayImage ?
-                <img src={props.displayImage} alt="bird shadow" />
+                <img src={props.displayImage} alt="choice bird img" />
                 :
                 props.rightAnswer ?
                 <img src={props.rightAnswer.image} alt="bird right answer img"/>

@@ -14,9 +14,8 @@ function App() {
   const [rightAnswer, setRightAnswer] = useState(null);
   const [scope, setScope] = useState(5);
   const [level, setLevel] = useState(0);
-  // const [countAttemps, setCountAttemps] = useState(0);
+  console.log("LEVEL = "+ level);
   let randomBirdVoice = birdsData[level][voiceNumber].audio;
-  console.log(answer);
   return (
     <div className="App">
       <Header scope={scope} />
@@ -35,7 +34,7 @@ function App() {
                   <span>Выберите птицу из списка</span>
                 </div>)
           }
-        </div> <Button answer={answer} setLevel={setLevel} />
+        </div> <Button answer={answer} setAnswer={setAnswer} setBirdInfo={setBirdInfo} setRightAnswer={setRightAnswer} level={level} setLevel={setLevel} />
       </div>
     </div>
   );

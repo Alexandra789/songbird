@@ -12,7 +12,7 @@ export default function Header(props) {
             <ul className="menu">
                 {
                     menuItems.map((item, i) =>
-                        <li className={i === 0 ? "item active" : "item"} key={i}>{item}</li>
+                        <li className={i === 0 ? "menu-item active" : "menu-item"} key={i}>{item}</li>
                     )
                 }
             </ul>

@@ -23,11 +23,11 @@
         list-style-type: none;
         display: flex;
 
-        .item.active {
+        .menu-item.active {
             background-color: #00bc8c;
         }
 
-        .item {
+        .menu-item {
             padding: 8px 0px;
             flex: auto;
             text-align: center;
