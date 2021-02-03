@@ -16,8 +16,7 @@ function App() {
   const [countAttemps, setCountAttemps] = useState(1);
   const [level, setLevel] = useState(0);
   const [voiceNumber, setVoiceNumber] = useState(Math.floor(Math.random() * Math.floor(6)));
-  console.log("SCOPE = " + scope);
-  console.log('ATTEMPS = ' + countAttemps);
+
   let randomBirdVoice = birdsData[level][voiceNumber].audio;
   return (
     <div className="App">
