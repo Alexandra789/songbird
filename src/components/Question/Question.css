@@ -9,7 +9,7 @@
 
 .question-container img {
   width: 200px;
-  height: 188px;
+  height: 170px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
@@ -20,10 +20,10 @@
 }
 
 .question-container .question-content .name {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding-bottom: 10px;
   border-bottom: 0.1px solid #9b979770;
-  font-size: 32px;
+  font-size: 28px;
 }
 
 .question-container .question-content .eng-name {

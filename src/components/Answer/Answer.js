@@ -3,11 +3,13 @@ import './Answer.css';
 
 
 export default function Answer(props) {
+    let answer = false;
+    let success = false;
+    let soundSuccess = new Audio("https://zvukipro.com/uploads/files/2018-10/1540309297_line_open.mp3");
+    let soundError = new Audio("https://zvukipro.com/uploads/files/2018-10/1540308447_6_sto-k-odnomu-ne-pra_ilnyy-ot_et.mp3")
+    let allRadioButton = document.querySelectorAll('.radio-button');
 
     const comparisonAnswer = (e, bird) => {
-        let answer = false;
-        let success = false;
-        let allRadioButton = document.querySelectorAll('.radio-button');
         let radioButton = e.target.children[0];
         for (let i = 0; i < allRadioButton.length; i++) {
             if (allRadioButton[i].classList.contains('success')) {
@@ -15,20 +17,17 @@ export default function Answer(props) {
             }
         }
         if (props.randomBirdVoice === bird.audio) {
-            let rightAnswer = bird;
-            console.log(rightAnswer);
-            props.setRightAnswer(rightAnswer);
+            soundSuccess.play();
+            props.setRightAnswer(bird);
             answer = true;
             props.setScope(props.scope);
             radioButton.classList.add('success');
-            // props.setCountAttemps(props.countAttemps);
         } else {
             if (success !== true && radioButton.classList.contains('error') !== true) {
                 props.setScope(props.scope - 1);
+                soundError.play();  
                 radioButton.classList.add('error');
             }
-            
-            // props.setCountAttemps(props.countAttemps + 1);
         }
         props.setAnswer(answer);
     }

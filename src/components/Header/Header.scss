@@ -3,7 +3,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 25px;
+        margin-top: 15px;
         margin-bottom: 15px;
         img {
             width: 200px;
@@ -11,6 +11,7 @@
         }
 
         .score {
+            margin: 0;
             font-size: 20px;
         }
     }

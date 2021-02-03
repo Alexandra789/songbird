@@ -3,7 +3,7 @@
     display: flex;
     img {
         width: 200px;
-        height: 188px;
+        height: 170px;
         object-fit: cover;
         border-radius: 10px;
     }
@@ -11,10 +11,10 @@
         width: calc(100% - 240px);
 
         .name {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             padding-bottom: 10px;
             border-bottom: 0.1px solid #9b979770;
-            font-size: 32px;
+            font-size: 28px;
         }
 
         .eng-name{
