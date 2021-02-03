@@ -6,11 +6,14 @@
 
 .answer-container .answers-list .item {
   list-style-type: none;
+  background-color: #303030;
   padding: 13px 20px;
-  border: 1px solid #444;
+  border: 1px solid #555;
+  border-top: none;
 }
 
 .answer-container .answers-list .item:first-of-type {
+  border-top: 1px solid #555;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
