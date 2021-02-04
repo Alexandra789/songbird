@@ -10,7 +10,7 @@ export default function GameOver(props){
         props.setScope(0);
         menuItem[0].classList.add('active');
         gameOver.style.display = 'none';
-        mainContent.style.display = 'flex';
+        mainContent.style.display = 'block';
         birdCard.style.display = 'block';
       
     }

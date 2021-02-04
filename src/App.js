@@ -25,22 +25,23 @@ function App() {
       <div className="bird-card">
         <Question randomBirdVoice={randomBirdVoice} rightAnswer={rightAnswer} />
       </div>
-      <div className="row mb2">
-        <div className="col-md-6 d-flex">
-          <Answer level={level} countAttemps={countAttemps} setCountAttemps={setCountAttemps} setBirdInfo={setBirdInfo} randomBirdVoice={randomBirdVoice} scope={scope} setScope={setScope} setAnswer={setAnswer} setRightAnswer={setRightAnswer} />
-        </div>
-        <div className="col-md-6 d-flex">
-          <div className="bird-card bird-card-description">
-            {
-              birdInfo ?
-                (<Description birdInfo={birdInfo} />)
-                :
-                (<div>
-                  <span>Послушайте плеер.</span><br />
-                  <span>Выберите птицу из списка</span>
-                </div>)
-            }
-          </div></div> <Button setCountAttemps={setCountAttemps} answer={answer} setVoiceNumber={setVoiceNumber} setAnswer={setAnswer} setBirdInfo={setBirdInfo} setRightAnswer={setRightAnswer} level={level} setLevel={setLevel} />
+      <div className="main-content">
+        <div className="row mb2">
+          <div className="col-md-6 d-flex">
+            <Answer level={level} countAttemps={countAttemps} setCountAttemps={setCountAttemps} setBirdInfo={setBirdInfo} randomBirdVoice={randomBirdVoice} scope={scope} setScope={setScope} setAnswer={setAnswer} setRightAnswer={setRightAnswer} />
+          </div>
+          <div className="col-md-6 d-flex">
+            <div className="bird-card bird-card-description">
+              {
+                birdInfo ?
+                  (<Description birdInfo={birdInfo} />)
+                  :
+                  (<div>
+                    <span>Послушайте плеер.</span><br />
+                    <span>Выберите птицу из списка</span>
+                  </div>)
+              }
+            </div></div></div> <Button setCountAttemps={setCountAttemps} answer={answer} setVoiceNumber={setVoiceNumber} setAnswer={setAnswer} setBirdInfo={setBirdInfo} setRightAnswer={setRightAnswer} level={level} setLevel={setLevel} />
       </div>
     </div>
   );
