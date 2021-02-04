@@ -20,9 +20,10 @@ export default function Answer(props) {
             soundSuccess.play();
             props.setRightAnswer(bird);
             answer = true;
-            console.log("LENGHT = " + allRadioButton.length);
-            console.log("ATTEMPS = " + props.countAttemps)
             let scopeLevel = allRadioButton.length - props.countAttemps
+            if(scopeLevel<0){
+                scopeLevel = 5;
+            }
             props.setScope(props.scope + scopeLevel);
             radioButton.classList.add('success');
         } else {
