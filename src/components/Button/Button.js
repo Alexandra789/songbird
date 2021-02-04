@@ -48,6 +48,6 @@ export default function Button(props) {
         }
     }
     return (
-        <button className="button-level" onClick={addLevel}>Next Level</button>
+        <button className="button-level" onClick={addLevel}>Следующий уровень</button>
     )
 }

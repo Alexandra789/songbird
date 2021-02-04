@@ -34,3 +34,13 @@
         }
     }
 }
+
+@media (max-width: 570px) {
+    .game-over {
+        padding: 1rem 2rem;
+        margin-bottom: 1.5rem;
+    }
+    .button-game-over{
+        font-size: 16px;
+    }
+}
