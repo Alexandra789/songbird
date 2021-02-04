@@ -1,1 +1,5 @@
-https://601b05f76cc7a700ad00df1e--peaceful-johnson-967282.netlify.app/
+# songbird
+
+Songbird - одностраничное приложение, викторина для распознавания птиц по их голосам.
+
+https://peaceful-johnson-967282.netlify.app/
