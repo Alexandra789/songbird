@@ -1,5 +1,8 @@
+.answer-container {
+  width: 100%;
+}
+
 .answer-container .answers-list {
-  width: 540px;
   padding: 0px;
   margin: 0px;
 }
@@ -7,7 +10,7 @@
 .answer-container .answers-list .item {
   list-style-type: none;
   background-color: #303030;
-  padding: 13.5px 20px;
+  padding: 14px 20px;
   border: 1px solid #555;
   border-top: none;
 }

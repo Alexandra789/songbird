@@ -9,7 +9,7 @@ export default function Header(props) {
                 <img src={logo} alt="" />
                 <p className="score">Score: {props.scope}</p>
             </div>
-            <ul className="menu">
+            <ul className="pagination">
                 {
                     menuItems.map((item, i) =>
                         <li className={i === 0 ? "menu-item active" : "menu-item"} key={i}>{item}</li>

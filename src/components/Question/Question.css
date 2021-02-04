@@ -13,6 +13,7 @@
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
+  margin-right: 1rem;
 }
 
 .question-container .question-content {
@@ -20,7 +21,7 @@
 }
 
 .question-container .question-content .name {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 0.1px solid #9b979770;
   font-size: 28px;
@@ -39,5 +40,26 @@
 
 .question-container .question-content .bird-voice:focus {
   outline: none;
+}
+
+@media (max-width: 992px) {
+  .question-content {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 570px) {
+  .question-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .question-container .name {
+    text-align: center;
+  }
+  .question-container img {
+    margin: 0 auto 25px;
+  }
 }
 /*# sourceMappingURL=Question.css.map */

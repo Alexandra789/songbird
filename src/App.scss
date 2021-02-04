@@ -1,16 +1,25 @@
 .bird-card {
     background-color: #303030;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     border-radius: 5px;
     padding: 1rem;
 }
 
-.main-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    .bird-card {
-        width: 550px;
-        height: 266px;
-    }
+
+.bird-card.bird-card-description{
+    margin: 0px;
+    width: 100%;
 }
+
+@media (max-width: 767px){
+.bird-card.bird-card-description{
+    display: block;
+    margin-top: 25px;
+}
+}
+
+// .main-content {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+// }

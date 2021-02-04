@@ -1,23 +1,19 @@
 .bird-card {
   background-color: #303030;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border-radius: 5px;
   padding: 1rem;
 }
 
-.main-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.bird-card.bird-card-description {
+  margin: 0px;
+  width: 100%;
 }
 
-.main-content .bird-card {
-  width: 550px;
-  height: 266px;
+@media (max-width: 767px) {
+  .bird-card.bird-card-description {
+    display: block;
+    margin-top: 25px;
+  }
 }
 /*# sourceMappingURL=App.css.map */
