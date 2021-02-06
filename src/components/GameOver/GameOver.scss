@@ -5,7 +5,8 @@
     background-color: #303030;
     border-radius: 0.3rem;
     display: none;
-
+    background-size: cover;
+    background-position-x: center;
     .congrats {
         font-weight: 300;
         line-height: 1.2;
@@ -41,7 +42,7 @@
         padding: 1rem 2rem;
         margin-bottom: 1.5rem;
     }
-    .button-game-over{
+    .button-game-over {
         font-size: 16px;
     }
 }

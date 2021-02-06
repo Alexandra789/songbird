@@ -18,9 +18,10 @@ export default function GameOver(props) {
     if(props.scope === 30) {
         gameOver.style.backgroundImage = 
         "url('https://4.bp.blogspot.com/-F_lsH73yHMQ/W0Its2856gI/AAAAAAAAGtU/mjJpotIB1bss2LmXNmCdF60KHFuS_626QCLcBGAs/s1600/fireworks.gif')";
-        gameOver.style.backgroundSize = 'cover';
+        
     }
     if(props.scope !== 30 && gameOver){
+        gameOver.style.backgroundColor = '#303030';
         gameOver.style.backgroundImage = 'none';   
     }
 

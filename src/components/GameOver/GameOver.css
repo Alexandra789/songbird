@@ -5,6 +5,8 @@
   background-color: #303030;
   border-radius: 0.3rem;
   display: none;
+  background-size: cover;
+  background-position-x: center;
 }
 
 .game-over .congrats {
