@@ -6,8 +6,6 @@ export default function Button(props) {
     let mainContent = document.querySelector('.main-content');
     let birdCard = document.querySelector('.bird-card');
     let gameOver = document.querySelector('.game-over');
-    console.log(mainContent);
-    console.log(birdCard);
     const voiceNumber = Math.floor(Math.random() * Math.floor(6));
 
     if (props.answer === true) {

@@ -11,15 +11,10 @@
     width: 100%;
 }
 
-@media (max-width: 767px){
-.bird-card.bird-card-description{
-    display: block;
-    margin-top: 25px;
-}
-}
+@media (max-width: 992px) {
+    .bird-card.bird-card-description {
+        margin-top: 25px;
+    }
+  }
 
-// .main-content {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-// }
+

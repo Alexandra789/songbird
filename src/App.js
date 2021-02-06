@@ -8,7 +8,7 @@ import birdsData from './birds';
 import { useState } from 'react';
 import './App.css';
 
-function App() {
+function App() { 
   const [birdInfo, setBirdInfo] = useState(null);
   const [answer, setAnswer] = useState(false);
   const [rightAnswer, setRightAnswer] = useState(null);
@@ -18,6 +18,7 @@ function App() {
   const [voiceNumber, setVoiceNumber] = useState(Math.floor(Math.random() * Math.floor(6)));
 
   let randomBirdVoice = birdsData[level][voiceNumber].audio;
+  console.log(birdsData[level][voiceNumber].name);
   return (
     <div className="App">
       <Header scope={scope} />
@@ -27,10 +28,10 @@ function App() {
       </div>
       <div className="main-content">
         <div className="row mb2">
-          <div className="col-md-6 d-flex">
+          <div className="col-md-12 col-xs-12 col-lg-6 col-xl-6 d-flex">
             <Answer level={level} countAttemps={countAttemps} setCountAttemps={setCountAttemps} setBirdInfo={setBirdInfo} randomBirdVoice={randomBirdVoice} scope={scope} setScope={setScope} setAnswer={setAnswer} setRightAnswer={setRightAnswer} />
           </div>
-          <div className="col-md-6 d-flex">
+          <div className="col-md-12 col-xs-12 col-lg-6 col-xl-6 d-flex">
             <div className="bird-card bird-card-description">
               {
                 birdInfo ?
