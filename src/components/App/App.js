@@ -1,14 +1,14 @@
-import Header from './components/Header/Header';
-import Question from './components/Question/Question';
-import Answer from './components/Answer/Answer';
-import Description from './components/Description/Description';
-import Button from './components/Button/Button';
-import GameOver from './components/GameOver/GameOver';
-import birdsData from './birds';
+import Header from '../Header/Header';
+import Question from '../Question/Question';
+import Answer from '../Answer/Answer';
+import Description from '../Description/Description';
+import Button from '../Button/Button';
+import GameOver from '../GameOver/GameOver';
+import birdsData from '../../constans/birds';
 import { useState } from 'react';
 import './App.css';
 
-function App() { 
+function App() {
   const [birdInfo, setBirdInfo] = useState(null);
   const [answer, setAnswer] = useState(false);
   const [rightAnswer, setRightAnswer] = useState(null);

@@ -1,4 +1,4 @@
-import birdsData from '../../birds';
+import birdsData from '../../constans/birds';
 import './Answer.css';
 
 
@@ -29,7 +29,7 @@ export default function Answer(props) {
         } else {
             if (success !== true && radioButton.classList.contains('error') !== true) {
                 props.setCountAttemps(props.countAttemps + 1);
-                soundError.play();  
+                soundError.play();
                 radioButton.classList.add('error');
             }
         }
