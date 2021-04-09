@@ -6,5 +6,9 @@ Songbird - одностраничное приложение, викторина
 Demo: https://peaceful-johnson-967282.netlify.app/
 
 npm install
+
+
 npm run-script build
+
+
 npm run-script start
